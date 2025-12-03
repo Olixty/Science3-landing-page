@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science3 - Tus productos de confianza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+
+        <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#inicio" class="flex items-center gap-3">
+                <span class="text-3xl">⚗️</span>
+                <span class="text-2xl font-bold text-blue-600">Caduceus</span>
+            </a>
+            <ul class="hidden md:flex gap-8">
+                <li><a href="#inicio" class="text-gray-700 hover:text-blue-600">Inicio</a></li>
+                <li><a href="#productos" class="text-gray-700 hover:text-blue-600">Productos</a></li>
+                <li><a href="#sobre" class="text-gray-700 hover:text-blue-600">Sobre Nosotros</a></li>
+                <li><a href="#contacto" class="text-gray-700 hover:text-blue-600">Contacto</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative text-white py-20 px-4 overflow-hidden">
+        <!-- Image Carousel Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="carousel-container relative w-full h-full">
+                <div class="carousel-slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2000&auto=format&fit=crop" alt="Farmacia" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40"></div>
+                </div>
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2000&auto=format&fit=crop" alt="Medicamentos" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40"></div>
+                </div>
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                    <img src="https://images.unsplash.com/photo-1551190832-a9155955c8f3?q=80&w=2000&auto=format&fit=crop" alt="Salud" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40"></div>
+                </div>
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2000&auto=format&fit=crop" alt="Cuidado médico" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Content Overlay -->
+        <div class="relative z-10 max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-4 drop-shadow-lg">Tu Salud es Nuestra Prioridad</h1>
+            <p class="text-xl mb-8 opacity-90 drop-shadow-md">Medicamentos y productos de salud de calidad al alcance de tu mano</p>
+            <button id="btn-comprar" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">
+                Comprar Ahora
+            </button>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-7xl mx-auto px-4 py-16">
+        
+        <!-- PRODUCTOS DESTACADOS -->
+        <section id="productos" class="mb-20">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Productos Destacados</h2>
+            <p class="text-gray-600 mb-12">Descubre nuestras categorías principales</p>
+            
+            <div class="grid grid-cols-1 gap-6">
+                
+                <!-- PRODUCTO 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 w-full h-40 md:h-48 bg-green-100">
+                            <img src="https://static.tiempo.com.mx/uploads/imagen/imagen/699927/principal_6opiikfsgbf47hmn73xe7dwmey.jpg" alt="Medicamentos" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 md:w-1/2">
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Productos farmacológicos</h3>
+                            <p class="text-gray-600 text-sm mb-4">Gama de productos farmacológicos seguros</p>
+                            <button id="btn-ver-mas" class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition font-semibold">
+                                Ver Más
+                            </button>
+                            <div id="producto-detalles" class="hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">Nuestra selección incluye:</h4>
+                                <ul class="text-sm text-gray-600 space-y-1 mb-3">
+                                    <li>• Gelatinas de carácter medicinal (desde 10€)</li>
+                                </ul>
+                                <p class="text-sm text-gray-600 mb-3">*Todos nuestros productos cuentan con registro sanitario y son distribuidos por laboratorios certificados.</p>
+                                <button id="btn-disponibilidad" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition font-semibold">
+                                    Consultar Disponibilidad
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SOBRE NOSOTROS -->
+        <section id="sobre" class="bg-blue-50 rounded-lg p-12 mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">¿Quiénes Somos?</h2>
+                    <p class="text-gray-700 mb-4">Somos una empresa comprometida con ofrecer productos de salud y soluciones a problemas clínicos con la más alta calidad y a precios accesibles.</p>
+                    <p class="text-gray-700 mb-4">Con más de 5 años de experiencia en el sector científico-médico, nuestro objetivo es ganar la confianza de miles de clientes y que nos elijan para[...]
+                    <div class="flex gap-4 mt-6">
+                        <div>
+                            <p class="text-2xl font-bold text-blue-600">5000+</p>
+                            <p class="text-gray-600">Encargos previstos</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-blue-600">5+</p>
+                            <p class="text-gray-600">Empresas involucradas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-200 rounded-lg h-80 flex items-center justify-center">
+                    <span class="text-8xl">🏥</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARACTERÍSTICAS -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Por Qué Elegirnos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="text-center">
+                    <div class="text-5xl mb-4">✅</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Productos Garantizados</h3>
+                    <p class="text-gray-600">Todos nuestros productos son originales y cumplen con las normas de calidad</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-5xl mb-4">🚚</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Envío Rápido</h3>
+                    <p class="text-gray-600">Entrega en 24-72 horas a toda la península</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-5xl mb-4">💬</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Atención al Cliente</h3>
+                    <p class="text-gray-600">Disponibles 24/7 para resolver tus dudas</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="bg-gray-800 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Caduceus</h3>
+                    <p class="text-gray-400">Soluciones médicas de confianza</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Navegación</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Inicio</a></li>
+                        <li><a href="#" class="hover:text-white">Productos</a></li>
+                        <li><a href="#" class="hover:text-white">Sobre Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Información</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" id="link-privacy" class="hover:text-white">Política de Privacidad</a></li>
+                        <li><a href="#" id="link-terms" class="hover:text-white">Términos de Servicio</a></li>
+                        <li><a href="#" class="hover:text-white">Devoluciones</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Contacto</h4>
+                    <p class="text-gray-400 mb-2">📧 info@caduceus.com</p>
+                    <p class="text-gray-400">📞 +34 681 26 93 37</p>
+                    <p class="text-gray-400">📞 +34 644 52 78 89</p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Caduceus. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="privacyModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/50">
+        <div class="bg-white w-full max-w-3xl max-h-[80vh] rounded-lg shadow-xl overflow-y-auto">
+            <div class="flex items-center justify-between p-4 border-b">
+                <h3 class="text-xl font-semibold">Política de Privacidad</h3>
+                <button class="p-2 rounded hover:bg-gray-100" data-close="privacyModal" aria-label="Cerrar">✕</button>
+            </div>
+            <div class="p-6 space-y-4 text-gray-700 text-sm leading-relaxed">
+                <p>En Science3 tratamos tus datos personales con responsabilidad y transparencia. Esta política explica qué datos recopilamos, para qué los usamos y cómo puedes ejercer tus derecho[...]
+                <h4 class="font-semibold text-gray-900">Datos que recopilamos</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Datos de identificación y contacto (nombre, email, teléfono, dirección).</li>
+                    <li>Datos de pedido y facturación.</li>
+                    <li>Datos de uso del sitio (cookies, analítica agregada).</li>
+                </ul>
+                <h4 class="font-semibold text-gray-900">Finalidades y base legal</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Prestar el servicio y gestionar pedidos (ejecución de contrato).</li>
+                    <li>Atención al cliente y comunicaciones (interés legítimo/consentimiento).</li>
+                    <li>Cumplimientos legales y seguridad (obligación legal/interés legítimo).</li>
+                </ul>
+                <h4 class="font-semibold text-gray-900">Plazos de conservación</h4>
+                <p>Conservamos los datos el tiempo necesario para las finalidades indicadas y según los plazos legales aplicables.</p>
+                <h4 class="font-semibold text-gray-900">Tus derechos</h4>
+                <p>Puedes ejercer acceso, rectificación, supresión, oposición, limitación y portabilidad, así como retirar tu consentimiento en cualquier momento. Escríbenos a <span class="font-[...]
+                <h4 class="font-semibold text-gray-900">Cookies</h4>
+                <p>Usamos cookies técnicas y, con tu consentimiento, analíticas. Puedes configurar tu navegador para gestionarlas.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/50">
+        <div class="bg-white w-full max-w-3xl max-h-[80vh] rounded-lg shadow-xl overflow-y-auto">
+            <div class="flex items-center justify-between p-4 border-b">
+                <h3 class="text-xl font-semibold">Términos de Servicio</h3>
+                <button class="p-2 rounded hover:bg-gray-100" data-close="termsModal" aria-label="Cerrar">✕</button>
+            </div>
+            <div class="p-6 space-y-4 text-gray-700 text-sm leading-relaxed">
+                <h4 class="font-semibold text-gray-900">Objeto</h4>
+                <p>Estos términos regulan el uso del sitio web y la compra de productos ofrecidos por Science3.</p>
+                <h4 class="font-semibold text-gray-900">Pedidos y precios</h4>
+                <p>Los precios incluyen impuestos aplicables. La confirmación de pedido es vinculante al efectuarse el pago.</p>
+                <h4 class="font-semibold text-gray-900">Envíos y devoluciones</h4>
+                <p>Envíos 24–72h según destino. Tienes derecho de desistimiento en 14 días naturales desde la entrega, salvo excepciones legales.</p>
+                <h4 class="font-semibold text-gray-900">Garantía</h4>
+                <p>Productos cubiertos por la garantía legal de conformidad. Contacta con soporte para gestionar incidencias.</p>
+                <h4 class="font-semibold text-gray-900">Responsabilidad</h4>
+                <p>No nos responsabilizamos por usos indebidos o contrarios a las instrucciones del producto.</p>
+                <h4 class="font-semibold text-gray-900">Ley aplicable</h4>
+                <p>Se aplica la legislación española. Para incidencias, contacta en <span class="font-medium">info@science3.com</span>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function () {
+        function $(sel) { return document.querySelector(sel); }
+        function openModal(id) {
+            var m = document.getElementById(id);
+            if (!m) return;
+            m.classList.remove('hidden');
+            m.classList.add('flex');
+        }
+        function closeModal(id) {
+            var m = document.getElementById(id);
+            if (!m) return;
+            m.classList.add('hidden');
+            m.classList.remove('flex');
+        }
+
+        var privacyLink = document.getElementById('link-privacy');
+        var termsLink = document.getElementById('link-terms');
+        var comprarBtn = document.getElementById('btn-comprar');
+        var verMasBtn = document.getElementById('btn-ver-mas');
+        var disponibilidadBtn = document.getElementById('btn-disponibilidad');
+        
+        if (privacyLink) privacyLink.addEventListener('click', function (e) { e.preventDefault(); openModal('privacyModal'); });
+        if (termsLink) termsLink.addEventListener('click', function (e) { e.preventDefault(); openModal('termsModal'); });
+        if (comprarBtn) comprarBtn.addEventListener('click', function () {
+            window.open('https://wa.me/34681269337?text=Hola, estoy interesado en comprar productos de Caduceus');
+        });
+        if (verMasBtn) verMasBtn.addEventListener('click', function () {
+            var detalles = document.getElementById('producto-detalles');
+            if (detalles.classList.contains('hidden')) {
+                detalles.classList.remove('hidden');
+                verMasBtn.textContent = 'Ver Menos';
+                verMasBtn.classList.remove('bg-green-500', 'hover:bg-green-600');
+                verMasBtn.classList.add('bg-gray-500', 'hover:bg-gray-600');
+            } else {
+                detalles.classList.add('hidden');
+                verMasBtn.textContent = 'Ver Más';
+                verMasBtn.classList.remove('bg-gray-500', 'hover:bg-gray-600');
+                verMasBtn.classList.add('bg-green-500', 'hover:bg-green-600');
+            }
+        });
+        if (disponibilidadBtn) disponibilidadBtn.addEventListener('click', function () {
+            window.open('https://wa.me/34681269337?text=Hola, quisiera consultar disponibilidad de medicamentos en Caduceus');
+        });
+
+        // Carousel functionality
+        var slides = document.querySelectorAll('.carousel-slide');
+        var currentSlide = 0;
+        
+        function showSlide(index) {
+            slides.forEach(function(slide, i) {
+                if (i === index) {
+                    slide.classList.remove('opacity-0');
+                    slide.classList.add('opacity-100');
+                } else {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0');
+                }
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        
+        // Change slide every 4 seconds
+        setInterval(nextSlide, 4000);
+
+        ['privacyModal', 'termsModal'].forEach(function (id) {
+            var m = document.getElementById(id);
+            if (!m) return;
+            m.addEventListener('click', function (e) { if (e.target === m) closeModal(id); });
+            m.querySelectorAll('[data-close="' + id + '"]').forEach(function (btn) {
+                btn.addEventListener('click', function () { closeModal(id); });
+            });
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') { closeModal('privacyModal'); closeModal('termsModal'); }
+        });
+    })();
+    </script>
+
+</body>
+</html>
